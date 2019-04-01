@@ -1,9 +1,7 @@
 This is a Prop Drilling exercise
 
 
-Prop drilling is the practice of passing props from parents to siblings. 
-
-Props are variables, state, or functions. 
+Prop drilling is the practice of passing props from parents to siblings. Props are variables, state, or functions. 
 
 <!-- Make sure to understand State here -->
 
@@ -40,7 +38,7 @@ This will become clearer when the person is no longer you, but a user you are tr
 
 <!-- Props Drill Practice -->
 
-This GH is a practice for drilling your props. That means, passing props from parents to their children. Follow the instructions in the Grandparents component to get the props to the Dad/ Mom.
+This repo is a practice for drilling your props. That means, passing props from parents to their children. Follow the instructions in the Grandparents component to get the props to the Dad/ Mom.
 
 You need to pass the toggle function from the grandparents to the Dad / Mom.
 
