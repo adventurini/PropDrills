@@ -51,3 +51,4 @@ Dad, Mom, and Grandparents are class components (where you can monitor state).
 Son and Daughter are functional components (where you cannot).
 
 
+PLEASE FORK THIS README. CLONE IT. AND PSEUDOCODE YOUR STEPS PRIOR TO WRITING A SINGLE LINE OF CODE!!!

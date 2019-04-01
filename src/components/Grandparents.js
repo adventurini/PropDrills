@@ -14,6 +14,8 @@ export default class  extends Component {
     // Here is your state, given to you. 
         // This state is being controlled only in this Grandparents component. However, if we pass methods to children / grandchildren, we can control it in other components.
             //Below we are going to toggle these states by passing children the toggle method.
+                //Pass the state to the Dad and Mom in the render function below. You can pass it
+                    //using any variable you wish. However, there is a variable in the Son and Daughter components that are prepared to check if they were passed.
         this.state = {
             passedInheritanceToGrandson: false,
             passedInheritanceToGranddaughter: false
