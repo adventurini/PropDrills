@@ -27,6 +27,7 @@ export default class  extends Component {
             //You will notice it is checking to receive something back from the toggle("**inside**")
                 //Where the toggle function will check if inside === 'son'
 
+                //IGNORE THE GUTS OF THIS FUNCTION for now
     toggle = (child) => {
         console.log(this.state.passedInheritance)
         if (child === 'son'){
@@ -42,6 +43,7 @@ export default class  extends Component {
 
     
   render() {
+      //get used to logging props and state IT IS THE MOST IMPORTANT TOOL
       console.log(this.state.passedInheritance)
     return (
       <div>
