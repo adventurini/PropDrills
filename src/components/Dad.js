@@ -6,16 +6,15 @@ import React, { Component } from 'react';
 import Son from './Son'
 
 export default class  extends Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
 
     }  
     render() {
     return (
       <div>
-      {console.log(this.props)}
-        <Son inherit={this.props.inherit}/>
-        <button onClick={()=> this.props.toggle('son')}>Receive Inheritance</button>
+        <Son/>
+        <button>Receive Inheritance</button>
       </div>
     )
   }

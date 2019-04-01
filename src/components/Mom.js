@@ -6,14 +6,14 @@ import React, { Component } from 'react';
 import Daughter from './Daughter'
 
 export default class Mom extends Component {
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
     }
   render() {
     return (
       <div>
-        <Daughter inherit={this.props.inherit}/>
-        <button onClick={()=> this.props.toggle('daughter')}>Receive Inheritance</button>
+        <Daughter/>
+        <button>Receive Inheritance</button>
       </div>
     )
   }

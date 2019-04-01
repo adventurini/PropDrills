@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Prop Drilling exercise
 
-## Available Scripts
 
-In the project directory, you can run:
+Prop drilling is the practice of passing props from parents to siblings. 
 
-### `npm start`
+Props are variables, state, or functions. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- Make sure to understand State here -->
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+State may sound confusing. But it's just state. When you say the word state, just think of 
+yourself as a person. Your state would include attributes such as your age and height. These things change very slowly (or perhaps do not change anymore). So monitoring this state would be simple.
 
-### `npm test`
+However, your mood, appetite, heart rate, 'awake or asleep', change daily or hourly.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+So you could create components that monitored each of these states such as this.
 
-### `npm run build`
+Class YearlyChanges
+state = {
+    age: '',
+    height: '',
+    weight: ''
+}
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Class DailyChanges
+state = {
+    mood: '',
+    awake: ''
+}
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Class HourlyChanges
+state = {
+    heart-rate: '',
+    mood: ''
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You may notice here, that mood is affected by the hour and day. Because you may want to control the state of your component in two different levels. (Such as the type of mood a person is in in the day, or hour) If someone's mood is bad, it may be bad for a whole day, which could be a state affected by another state. But it may change three times in a single day. Whereas age only changes one time per year. And will not have to be monitored outside a yearly component. 
 
-### `npm run eject`
+<!-- State -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<!-- Props Drill Practice -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This GH is a practice for drilling your props. That means, passing props from parents to their children. Follow the instructions in the Grandparents component to get the props to the Dad/ Mom.
 
-## Learn More
+You need to pass the toggle function, as well as the state from the grandparents.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

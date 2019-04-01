@@ -10,11 +10,20 @@ import Dad from './Dad'
 export default class  extends Component {
     constructor(){
         super();
+
+    // Here is your state, given to you. 
+        // This state is being controlled only in this Grandparents component. However, if we pass methods to children / grandchildren, we can control it in other components.
+            //Below we are going to toggle these states by passing children the toggle method.
         this.state = {
             passedInheritanceToGrandson: false,
             passedInheritanceToGranddaughter: false
         }
     }
+//This is your toggle function
+    //It needs to be passed to the Dad ***AND*** Mom component for those buttons to work properly
+        //Pass this below inside the render 
+            //You will notice it is checking to receive something back from the toggle("**inside**")
+                //Where the toggle function will check if inside === 'son'
 
     toggle = (child) => {
         console.log(this.state.passedInheritance)
@@ -34,8 +43,8 @@ export default class  extends Component {
       console.log(this.state.passedInheritance)
     return (
       <div>
-        <Dad inherit={this.state.passedInheritanceToGrandson} toggle={this.toggle}/>
-        <Mom inherit={this.state.passedInheritanceToGranddaughter} toggle={this.toggle}/>
+        <Dad/>
+        <Mom/>
       </div>
     )
   }
